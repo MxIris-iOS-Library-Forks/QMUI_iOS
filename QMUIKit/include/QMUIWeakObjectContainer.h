@@ -1,0 +1,1 @@
+../QMUIComponents/QMUIWeakObjectContainer.h

@@ -1,0 +1,1 @@
+../QMUIComponents/QMUIScrollAnimator/QMUINavigationBarScrollingSnapAnimator.h

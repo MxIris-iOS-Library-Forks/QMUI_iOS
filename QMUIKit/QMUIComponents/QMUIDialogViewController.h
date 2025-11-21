@@ -140,6 +140,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)hideWithAnimated:(BOOL)animated completion:(void (^ _Nullable)(BOOL finished))completion;
 
+- (CGSize)computeContentSizeWithLimitSize:(CGSize)limitSize;
+
 @end
 
 @interface QMUIDialogViewController (UIAppearance)

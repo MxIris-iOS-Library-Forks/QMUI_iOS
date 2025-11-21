@@ -1,0 +1,1 @@
+../QMUIComponents/AssetLibrary/QMUIAssetsManager.h
