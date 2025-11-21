@@ -392,13 +392,7 @@ EndIgnoreClangWarning
     }];
 }
 
-#pragma mark - <QMUIModalPresentationContentViewControllerProtocol>
-
-- (CGSize)preferredContentSizeInModalPresentationViewController:(QMUIModalPresentationViewController *)controller keyboardHeight:(CGFloat)keyboardHeight limitSize:(CGSize)limitSize {
-    if (!self.hasCustomContentView) {
-        return limitSize;
-    }
-    
+- (CGSize)computeContentSizeWithLimitSize:(CGSize)limitSize {
     BOOL isFooterViewShowing = self.footerView && !self.footerView.hidden;
     CGFloat footerHeight = isFooterViewShowing ? self.footerViewHeight : 0;
     
@@ -409,6 +403,16 @@ EndIgnoreClangWarning
     
     CGSize finalSize = CGSizeMake(MIN(limitSize.width, contentViewSize.width), MIN(limitSize.height, self.headerViewHeight + contentViewSize.height + contentViewVerticalMargin + footerHeight));
     return finalSize;
+}
+
+#pragma mark - <QMUIModalPresentationContentViewControllerProtocol>
+
+- (CGSize)preferredContentSizeInModalPresentationViewController:(QMUIModalPresentationViewController *)controller keyboardHeight:(CGFloat)keyboardHeight limitSize:(CGSize)limitSize {
+    if (!self.hasCustomContentView) {
+        return limitSize;
+    }
+    
+    return [self computeContentSizeWithLimitSize:limitSize];
 }
 
 #pragma mark - <QMUIModalPresentationComponentProtocol>

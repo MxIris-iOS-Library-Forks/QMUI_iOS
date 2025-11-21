@@ -1,0 +1,1 @@
+../QMUIComponents/QMUILogger+QMUIConfigurationTemplate.h

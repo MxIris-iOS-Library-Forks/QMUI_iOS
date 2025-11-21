@@ -1,0 +1,1 @@
+../QMUIComponents/QMUIImagePreviewView/QMUIImagePreviewViewTransitionAnimator.h

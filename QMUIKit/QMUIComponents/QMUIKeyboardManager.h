@@ -33,6 +33,7 @@
  *  @see UITextField(QMUI)
  *  @see UITextView(QMUI)
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface QMUIKeyboardManager : NSObject
 
 /**
@@ -56,6 +57,7 @@
  */
 @property(nonatomic, assign) BOOL ignoreApplicationState UI_APPEARANCE_SELECTOR;
 
+@property(nonatomic, assign) BOOL ignoreCheckLocalKeyboard;
 
 + (instancetype)appearance;
 
@@ -269,3 +271,4 @@
 @property(nonatomic, copy) void (^qmui_keyboardDidChangeFrameNotificationBlock)(QMUIKeyboardUserInfo *keyboardUserInfo);
 
 @end
+NS_ASSUME_NONNULL_END

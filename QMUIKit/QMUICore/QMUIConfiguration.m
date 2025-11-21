@@ -98,7 +98,7 @@ static BOOL QMUI_hasAppliedInitialTemplate;
         numberOfClasses = objc_getClassList(NULL, 0);
         classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numberOfClasses);
         objc_getClassList(classes, numberOfClasses);
-        NSAssert(NO, @"如果你看到这条提示，建议到 GitHub 上提 issue，让我们联系你查看项目的配置表使用情况，否则请注释掉这一行。");
+//        NSAssert(NO, @"如果你看到这条提示，建议到 GitHub 上提 issue，让我们联系你查看项目的配置表使用情况，否则请注释掉这一行。");
     }
     for (NSInteger i = 0; i < numberOfClasses; i++) {
         Class class = classesref ? (__bridge Class)classesref[i] : classes[i];
@@ -291,7 +291,7 @@ static BOOL QMUI_hasAppliedInitialTemplate;
     self.needsBackBarButtonItemTitle = YES;
     self.preventConcurrentNavigationControllerTransitions = YES;
     self.shouldFixTabBarSafeAreaInsetsBug = YES;
-    self.sendAnalyticsToQMUITeam = YES;
+    self.sendAnalyticsToQMUITeam = NO;
 }
 
 #pragma mark - Switch Setter
